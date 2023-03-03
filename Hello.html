@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        export default {
-          data() {
-            return {
-              message: 'Hello World!'
-            }
-          }
-        }
-    </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
 </head>
 <body>
-  <h1>{{data}}</h1>  
+  <div id="app">{{message}}</div>
+  <script>
+    const { createApp } = Vue
+    createApp({
+      data() {
+        return {
+          message: 'Hello Vue!'
+        }
+      }
+    }).mount('#app')
+  </script>
+
 </body>
 </html>
